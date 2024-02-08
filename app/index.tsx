@@ -1,22 +1,22 @@
 import { Stack, Link } from 'expo-router';
-import { YStack } from 'tamagui';
-
-import { Container, Main, Title, Subtitle, Button, ButtonText } from '../tamagui.config';
+import { YStack, XStack, Text, Button } from 'tamagui';
+import { Container, Main, Title, Subtitle, Button as TamaguiButton } from '../tamagui.config';
 
 export default function Page() {
   return (
-    <Container>
+    <Container style={{ backgroundColor: 'lightblue' }}>
       <Main>
-        <Stack.Screen options={{ title: 'Overview' }} />
+        <Stack.Screen options={{ title: 'Movie Making' }} />
         <YStack>
           <Title fontSize={35}>THE AMANZING SPIDERMAN</Title>
-          <Subtitle>Andreaw Garfield</Subtitle>
+          <Subtitle>Andrew Garfield</Subtitle>
+          <Text>Evaluacion Momento 3 previo a concluir el ciclo</Text>
+          <Link href={{ pathname: '/step2', params: { name: 'Dan' } }} asChild>
+            <TamaguiButton style={{ backgroundColor: '#007bff', marginTop: 20 }}>
+              <Text style={{ color: '#fff' }}>Inicio</Text>
+            </TamaguiButton>
+          </Link>
         </YStack>
-        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
-          <Button>
-            <ButtonText>START</ButtonText>
-          </Button>
-        </Link>
       </Main>
     </Container>
   );
