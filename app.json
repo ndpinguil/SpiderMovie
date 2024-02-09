@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "spiderman",
-    "slug": "spiderman",
+    "name": "tercermomento",
+    "slug": "tercermomento",
     "version": "1.0.0",
 
-    "scheme": "spiderman",
+    "scheme": "tercermomento",
     "web": {
       "bundler": "metro",
       "output": "static",

@@ -1,22 +1,26 @@
 import { Stack, Link } from 'expo-router';
-import { YStack, XStack, Text, Button } from 'tamagui';
-import { Container, Main, Title, Subtitle, Button as TamaguiButton } from '../tamagui.config';
+import { Image, YStack } from "tamagui";
+
+import { Container, Main, Title, Subtitle, Button, ButtonText } from '../tamagui.config';
 
 export default function Page() {
   return (
-    <Container style={{ backgroundColor: 'lightblue' }}>
-      <Main>
-        <Stack.Screen options={{ title: 'Movie Making' }} />
+    <Container style={{backgroundColor: '#350A24', textAlign: 'center', justifyContent:'center', fontStyle:'Inter' }}>
+      <Main justifyContent='center' alignItems='center'>
+        <Stack.Screen options={{ title: 'Tercer Momento Piensas'}} />
+        <Image
+          source={
+            require('../assets/Camera.png')
+        }
+        />
         <YStack>
-          <Title fontSize={35}>THE AMANZING SPIDERMAN</Title>
-          <Subtitle>Andrew Garfield</Subtitle>
-          <Text>Evaluacion Momento 3 previo a concluir el ciclo</Text>
-          <Link href={{ pathname: '/step2', params: { name: 'Dan' } }} asChild>
-            <TamaguiButton style={{ backgroundColor: '#007bff', marginTop: 20 }}>
-              <Text style={{ color: '#fff' }}>Inicio</Text>
-            </TamaguiButton>
-          </Link>
+          <Title style={{ color: 'white', fontSize: 20, fontWeight: 'bold',  }}>Movie {'\n'} Making </Title>
         </YStack>
+        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
+          <Button backgroundColor='#752D59' width='40%'>
+            <ButtonText>Begin</ButtonText>
+          </Button>
+        </Link>
       </Main>
     </Container>
   );
