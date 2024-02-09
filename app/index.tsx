@@ -7,18 +7,17 @@ export default function Page() {
   return (
     <Container style={{backgroundColor: '#350A24', textAlign: 'center', justifyContent:'center', fontStyle:'Inter' }}>
       <Main justifyContent='center' alignItems='center'>
-        <Stack.Screen options={{ title: 'Tercer Momento Piensas'}} />
+        <Stack.Screen options={{ title: '🕸️MOVIE🕷️'}} />
         <Image
-          source={
-            require('../assets/Camera.png')
-        }
-        />
+          source={require('../assets/Camera.png')}/>
         <YStack>
-          <Title style={{ color: 'white', fontSize: 20, fontWeight: 'bold',  }}>Movie {'\n'} Making </Title>
+          <Title style={{ color: 'white', fontSize: 20, fontWeight: 'bold',  }}>THE AMAZING SPIDERMAN</Title>
+          <Subtitle textAlign='center' style={{ color: '#ffffff', marginBottom: 20 }}>Andrew Garfield</Subtitle>
+          
         </YStack>
         <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
           <Button backgroundColor='#752D59' width='40%'>
-            <ButtonText>Begin</ButtonText>
+            <ButtonText>INICIO</ButtonText>
           </Button>
         </Link>
       </Main>
